@@ -28,14 +28,36 @@ cd Insurance-calculation-API-service
 3.Build and run the Docker containers:
 docker-compose up --build
 
+4. The service should now be running at `http://localhost:8000/`.
+
 ### Usage
 
-- To calculate insurance cost, make a GET request to `/calculate-insurance` endpoint with the following query parameters:
+- To calculate insurance cost, make a POST request to `/api/insurance/calculate` endpoint with the following parameters:
 - `cargo_type`: Type of cargo (e.g., Glass, Other)
-- `declared_value`: Declared value of the cargo
+- `cost`: Declared cost of the cargo
 - `tariff_date` (optional): Date of the tariff (default: current date)
 
-- To upload tariff rates, make a POST request to `/tariffs/upload` endpoint with a JSON payload containing the tariff rates in the specified format.
+- To upload tariff rates, make a POST request to `api/tariffs/create` endpoint with a JSON payload containing the tariff rates in the specified format.
+  #### example payload:
+
+  {
+                    "tariffs": {
+                        "2020-06-01": [
+                            {"cargo_type": "Glass",
+                             "rate": 0.04},
+
+                            {"cargo_type": "Other",
+                             "rate": 0.01}
+                        ],
+                        "2020-07-01": [
+                            {"cargo_type": "Glass",
+                             "rate": 0.035},
+
+                            {"cargo_type": "Other",
+                             "rate": 0.015}
+                        ]
+                    }
+                }
 
 Refer to the API documentation and examples for detailed usage instructions.
 
