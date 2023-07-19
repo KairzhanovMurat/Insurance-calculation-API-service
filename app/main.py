@@ -11,7 +11,6 @@ app.include_router(insurance_router)
 
 register_tortoise(
     app,
-
     db_url=db_url,
     modules={"models": ["models"]},
     generate_schemas=True,

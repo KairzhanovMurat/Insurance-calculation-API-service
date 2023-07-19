@@ -48,5 +48,5 @@ class Tariff(TariffItem):
 
 class InsuranceData(BaseModel):
     cargo_type: CargoType
-    tariff_date: date
+    tariff_date: date = date.today()
     cost: float

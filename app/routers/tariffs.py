@@ -24,7 +24,7 @@ async def get_tariff_by_id(tariff_id: int):
                         detail=f'No tariff with {tariff_id} id')
 
 
-@tariff_router.patch('/{tariff_id}')
+@tariff_router.put('/{tariff_id}')
 async def update_tariff(tariff_id: int, tariff_data: schemas.Tariff):
     updated = await CRUD.update(tariff_id, tariff_data)
     if updated:
