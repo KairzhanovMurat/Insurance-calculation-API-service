@@ -41,25 +41,7 @@ docker-compose up --build
   #### example payload:
 
 
-```json
-  {
-                    "tariffs": {
-                        "2020-06-01": [
-                            {"cargo_type": "Glass",
-                             "rate": 0.04},
-
-                            {"cargo_type": "Other",
-                             "rate": 0.01}
-                        ],
-                        "2020-07-01": [
-                            {"cargo_type": "Glass",
-                             "rate": 0.035},
-
-                            {"cargo_type": "Other",
-                             "rate": 0.015}
-                        ]
-                    }
-                }
+![image](https://github.com/KairzhanovMurat/Insurance-calculation-API-service/assets/80448188/88d5ff1f-c508-4fca-a998-8c63b5ab42ce)
 
 
   
