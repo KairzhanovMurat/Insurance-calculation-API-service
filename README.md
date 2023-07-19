@@ -41,8 +41,7 @@ docker-compose up --build
   #### example payload:
 
 
-
-
+```json
   {
                     "tariffs": {
                         "2020-06-01": [
