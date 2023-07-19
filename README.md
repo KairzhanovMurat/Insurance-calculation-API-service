@@ -40,6 +40,9 @@ docker-compose up --build
 - To upload tariff rates, make a POST request to `api/tariffs/create` endpoint with a JSON payload containing the tariff rates in the specified format.
   #### example payload:
 
+
+
+
   {
                     "tariffs": {
                         "2020-06-01": [
@@ -58,6 +61,9 @@ docker-compose up --build
                         ]
                     }
                 }
+
+
+  
 
 Refer to the API documentation and examples for detailed usage instructions.
 
